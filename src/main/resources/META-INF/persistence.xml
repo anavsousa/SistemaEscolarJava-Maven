@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+    <persistence-unit name="SistemaEscolarPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>br.com.sistemaescola.Model.Aluno</class>
+        <class>br.com.sistemaescola.Model.Professor</class>
+        <class>br.com.sistemaescola.Model.Disciplina</class>
+        <class>br.com.sistemaescola.Model.Turma</class>
+        <class>br.com.sistemaescola.Model.Avaliacao</class>
+        <class>br.com.sistemaescola.Model.Boletim</class>
+        <class>br.com.sistemaescola.Model.Mensalidade</class>
+        <class>br.com.sistemaescola.Model.Endereco</class>
+        <class>br.com.sistemaescola.Model.Funcionario</class>
+        <class>br.com.sistemaescola.Model.Diretor</class>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://ep-cool-fire-acx8whhu-pooler.sa-east-1.aws.neon.tech/neondb?sslmode=require&amp;channel_binding=require"/>
+            <property name="javax.persistence.jdbc.user" value="neondb_owner"/>
+            <property name="javax.persistence.jdbc.password" value="npg_A5se4tomKwEJ"/>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
